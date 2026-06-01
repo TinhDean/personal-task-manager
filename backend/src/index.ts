@@ -26,8 +26,8 @@ app.get('/', (req: Request, res: Response) => {
 });
 
 // Api Routes
-app.use('/api/auth', authRoutes);
-app.use('/api/tasks', taskRoutes);
+app.use('/auth', authRoutes);
+app.use('/tasks', taskRoutes);
 
 if (!MONGODB_URI) {
   console.error('ERROR: MONGODB_URI is not defined in the .env file.');
